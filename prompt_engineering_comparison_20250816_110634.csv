@@ -1,0 +1,297 @@
+technique,prompt,gpt5_response,claude_response,timestamp,gpt5_length,claude_length,length_difference,gpt5_has_steps,claude_has_steps,gpt5_error,claude_error
+Basic Prompting,Write a haiku about coding in Python.,"Indentation hums,
+readable rivers of code,
+snakes coil into loops.","Here's a haiku about coding in Python:
+
+Indentation speaks—
+Clean lines of logic unfold,
+Snake's wisdom in code.",2025-08-16 11:01:41,66,112,-46,False,False,False,False
+Few-Shot Learning,"Classify emotions in these sentences:
+
+Sentence: ""I'm thrilled about my promotion!""
+Emotion: Joy
+
+Sentence: ""This traffic is making me late again.""
+Emotion: Frustration
+
+Sentence: ""I can't believe I forgot my anniversary.""
+Emotion: ?",Emotion: Regret,"Sentence: ""I can't believe I forgot my anniversary.""
+Emotion: Regret (or Guilt/Shame)
+
+This sentence expresses remorse and self-reproach for forgetting an important date, which indicates feelings of regret about the oversight.",2025-08-16 11:02:09,15,226,-211,False,False,False,False
+Chain of Thought,"Calculate compound interest step by step:
+Principal: $5,000, Rate: 7% annually, Time: 3 years
+
+Show:
+1. Year 1 calculation
+2. Year 2 calculation  
+3. Year 3 calculation
+4. Total interest earned","Here’s the year-by-year compound interest (annual compounding) on $5,000 at 7% for 3 years.
+
+1) Year 1
+- Starting principal: $5,000.00
+- Interest: 5,000 × 0.07 = $350.00
+- End balance: 5,000.00 + 350.00 = $5,350.00
+
+2) Year 2
+- Starting principal: $5,350.00
+- Interest: 5,350 × 0.07 = $374.50
+- End balance: 5,350.00 + 374.50 = $5,724.50
+
+3) Year 3
+- Starting principal: $5,724.50
+- Interest: 5,724.50 × 0.07 = $400.715 ≈ $400.72
+- End balance: 5,724.50 + 400.715 = $6,125.215 ≈ $6,125.22
+
+4) Total interest earned
+- Sum of yearly interest: 350.00 + 374.50 + 400.715 = $1,125.215 ≈ $1,125.22
+- Check: Ending balance − initial principal = 6,125.215 − 5,000 = $1,125.215 ≈ $1,125.22
+
+Note: Final amounts shown to the nearest cent.","I'll calculate the compound interest step by step, showing how the principal grows each year.
+
+**Given:**
+- Principal: $5,000
+- Rate: 7% annually
+- Time: 3 years
+
+## Year 1 Calculation
+- Starting amount: $5,000
+- Interest earned: $5,000 × 0.07 = $350
+- **Ending balance: $5,000 + $350 = $5,350**
+
+## Year 2 Calculation
+- Starting amount: $5,350 (previous year's ending balance)
+- Interest earned: $5,350 × 0.07 = $374.50
+- **Ending balance: $5,350 + $374.50 = $5,724.50**
+
+## Year 3 Calculation
+- Starting amount: $5,724.50
+- Interest earned: $5,724.50 × 0.07 = $400.72
+- **Final balance: $5,724.50 + $400.72 = $6,125.22**
+
+## Summary
+- Original principal: $5,000.00
+- Final amount: $6,125.22
+- **Total interest earned: $6,125.22 - $5,000.00 = $1,125.22**
+
+**Breakdown of interest by year:**
+- Year 1: $350.00
+- Year 2: $374.50
+- Year 3: $400.72
+- **Total: $1,125.22**
+
+The compound effect generated an additional $25.22 compared to simple interest, which would have been $1,100 ($5,000 × 0.07 × 3).",2025-08-16 11:02:45,728,999,-271,False,True,False,False
+Role-Based Prompting,"You are a pirate captain from the 1700s who just discovered Python programming.
+
+Explain what a 'for loop' is using your pirate vocabulary.","Arrr, listen close, ye code‑swab! A for loop be like lining up a crew o’ items and marchin’ each one past the captain’s good eye. Fer every trinket in the trove, ye shout the same order, and the order be carried out once per trinket. When the line’s done, the loop be done.
+
+Think of it as:
+- Ye have a pile o’ things (a list, a chest o’ coins, a map o’ islands).
+- Ye give each thing a temporary name as it steps forward.
+- Ye run the same set o’ commands on each, one after t’other.
+
+Examples from me quarterdeck:
+
+Counting me booty:
+for coin in treasure_chest:
+    polish(coin)
+    log(""Shiny coin secured, cap'n!"")
+
+Sailing step by step:
+for step in range(1, 6):
+    hoist_sail(step)
+
+Naming each scallywag in the crew:
+for sailor in crew_list:
+    order(sailor, ""Swab the deck!"")
+
+Dodgin’ curses with break and continue:
+for coin in treasure_chest:
+    if coin.is_cursed():
+        yell(""Belay that! Cursed coin spotted!"")
+        break  # stop the line right there
+    if coin.is_slimey():
+        continue  # skip this nasty one, move to the next
+    stash(coin)
+
+Secret clause fer when no one mutinies (the else be run only if ye never broke out early):
+for island in islands:
+    if island.is_kraken_nest():
+        chart(""Turn about!"")
+        break
+else:
+    cheer(""No krakens today—full speed ahead!"")
+
+Mind yer indents like tidy coils o’ rope—four spaces be the proper knot—or the Python serpent will bite ye. Arrr!","*adjusts tricorn hat and peers at the glowing screen with one good eye*
+
+Ahoy there, ye scurvy landlubber! Let me tell ye about this mystical contraption called a ""for loop"" - 'tis like havin' the most obedient crew member ye ever did see!
+
+Picture this, matey: Ye got a chest full of doubloons that need countin', aye? Instead of doin' it yerself like some bilge rat, ye can command yer trusty Python parrot to do the same task over and over again for every single piece of treasure!
+
+```python
+treasure_chest = [""gold doubloon"", ""silver piece"", ""ruby"", ""emerald""]
+
+for loot in treasure_chest:
+    print(f""Arrr! I be countin' one {loot}!"")
+```
+
+See there? That ""for loop"" be like tellin' yer crew: ""For every piece of loot in me treasure chest, ye scallywag, shout out what ye found!"" And blow me down, it'll go through each and every item without skippin' a beat or needin' a swig of rum to keep goin'!
+
+'Tis like havin' a crew member who never gets tired, never complains about the work, and never tries to mutiny against ye! The loop keeps sailin' through yer collection until it's visited every port in yer list.
+
+*takes a swig from rum bottle*
+
+Now that be some powerful magic, even for an old sea dog like meself! Arrr!",2025-08-16 11:03:30,1428,1226,202,True,False,False,False
+Structured Instructions,"Create a restaurant review with this exact format:
+
+🏪 Name: [Restaurant Name]
+⭐ Rating: [1-5 stars]
+💰 Price: [$/$$/$$$]
+🍽️ Cuisine: [Type]
+📝 Review: [2-3 sentences]
+👍 Best: [Recommendation]
+❌ Skip: [What to avoid]
+
+Write for: Italian restaurant ""Nonna's Kitchen""","🏪 Name: Nonna's Kitchen
+⭐ Rating: 4.5/5
+💰 Price: $$
+🍽️ Cuisine: Italian
+📝 Review: A cozy, family-run spot where the aroma of simmering tomatoes greets you at the door. Fresh, house-made pastas and slow-cooked sauces shine, with portions generous but not heavy. Service is warm and unhurried—expect a relaxed, home-style pace.
+👍 Best: Pappardelle with slow-braised beef ragù; classic tiramisu.
+❌ Skip: House red by the glass—opt for the Barbera instead.","🏪 Name: Nonna's Kitchen
+⭐ Rating: 4/5 stars
+💰 Price: $$
+🍽️ Cuisine: Italian
+📝 Review: This cozy family-run trattoria delivers authentic Italian comfort food with generous portions and warm hospitality. The handmade pasta is exceptional, and the rustic atmosphere makes you feel like you're dining in someone's home kitchen.
+👍 Best: Homemade fettuccine alfredo and tiramisu
+❌ Skip: The pizza - stick to their pasta specialties",2025-08-16 11:04:08,452,425,27,False,False,False,False
+Zero-Shot CoT,"What are the top 3 factors for mobile app success in 2025?
+
+Think through this step by step.","Here are the top three factors that most reliably drive mobile app success in 2025, plus how to measure and operationalize each.
+
+1) Retention-first product-market fit
+- Why it matters: Sustainable growth comes from repeat value. Without strong retention, UA spend and virality won’t stick.
+- What to measure:
+  - Cohort retention: Day 1, 7, 30 (targets vary by category; aim to beat your category’s top quartile).
+  - Activation: % of new users reaching the “aha” action in first session/day.
+  - DAU/MAU (stickiness), frequency of the core action, NPS/CSAT.
+- What to do:
+  - Reduce time-to-value: make the core benefit obvious and reachable in under 60 seconds.
+  - Ruthless onboarding simplification; progressive disclosure; social sign-in; defer permissions until contextually needed.
+  - Personalize early: content, recommendations, and UI shortcuts based on first-session signals.
+  - Build habit loops with genuinely useful triggers (not spam): lifecycle messaging tied to user intent and recency.
+
+2) Flawless experience, performance, and trust
+- Why it matters: App store rankings, reviews, conversion, and retention are highly sensitive to speed, stability, battery, and perceived privacy/security.
+- What to measure:
+  - Crash-free sessions >99.9%; ANR rate as low as possible (esp. on Android).
+  - Cold-start p95: ~<2s on iOS, <3s on Android (category dependent).
+  - p95 in-app latency for key actions <200–400 ms; app size and battery impact; accessibility compliance; 4.5+ star rating; response time to reviews <48h.
+  - Clear consent rates; minimal data-collection footprint; adherence to ATT on iOS and Privacy Sandbox on Android.
+- What to do:
+  - Performance: lazy-load non-critical modules, cache smartly, prefetch, compress images/video, reduce overdraw, monitor p95/p99.
+  - Reliability: feature flags, staged rollouts, real-time observability, rapid crash triage.
+  - Offline/poor-network resilience where relevant.
+  - Security/privacy: data minimization, on-device processing when possible, encryption in transit/at rest, transparent consent and granular controls, accurate privacy manifests.
+  - Accessibility: WCAG 2.2 AA basics (contrast, hit targets, screen reader labels, motion reduction).
+
+3) Efficient, privacy-safe growth and monetization
+- Why it matters: Signal loss and rising ad costs require durable, diversified acquisition with LTV clearly exceeding CAC.
+- What to measure:
+  - LTV:CAC ratio (aim ≥3:1), payback period, blended ROAS.
+  - Organic share, app store conversion, ratings volume/velocity.
+  - Referral/virality (K-factor), web-to-app conversion, deep-link attribution.
+  - Monetization: trial start→convert→retain, renewal rates, ARPDAU/ARPU by cohort; ad revenue quality (viewability, eCPM) if ad-supported.
+- What to do:
+  - ASO as a weekly habit: keyword tuning, localized listings, creative tests, ratings prompts after positive moments.
+  - Web-to-app: smart banners, deferred deep links, SEO landing pages that mirror in-app value.
+  - Privacy-aware paid UA: SKAdNetwork on iOS, Privacy Sandbox on Android; creative-first testing; run incrementality tests and MMM to fill attribution gaps.
+  - Lifecycle CRM: email/push/in-app aligned to user intent; suppress when low value; personalize.
+  - Monetization fit: price localization, clear paywall value, flexible trials, win-back offers, server-driven paywalls; for ads, balance UX and yield.
+
+90-day execution blueprint
+- Weeks 0–2: Instrument analytics (events, cohorts, p95/99 performance), define North Star and input metrics, baseline retention and store conversion, fix top crashes.
+- Weeks 2–6: Redesign onboarding for faster time-to-value; implement consent and privacy UX; optimize cold start and largest UX papercuts; refresh store creatives and ratings prompts.
+- Weeks 6–12: Launch lifecycle messaging and deep links; start disciplined ASO cadence; roll out referral program; begin privacy-safe UA with creative testing; run first paywall/offer experiments; set up MMM/incrementality.
+
+If you share your category and current metrics, I can tailor targets and a sharper 30/60/90 plan.","Let me think through the key factors that will drive mobile app success in 2025, considering current trends and emerging technologies.
+
+## Step-by-Step Analysis:
+
+**Current Market Context:**
+- Saturated app stores with millions of apps
+- Users have higher expectations for quality and performance
+- Privacy regulations becoming stricter
+- AI/ML becoming mainstream
+- Economic pressures affecting user spending
+
+**Top 3 Critical Success Factors:**
+
+## 1. **AI-Powered Personalization & User Experience**
+- **Why it matters:** Generic experiences no longer cut it. Users expect apps that learn and adapt to their preferences
+- **Key elements:** 
+  - Intelligent content curation
+  - Predictive user interfaces
+  - Personalized onboarding flows
+  - Smart notifications that don't annoy
+- **Impact:** Apps that leverage AI to create truly personalized experiences will have significantly higher retention rates
+
+## 2. **Privacy-First Design & Transparent Data Practices**
+- **Why it's crucial:** Growing privacy awareness, stricter regulations (GDPR, iOS privacy changes), and user distrust of data collection
+- **Key elements:**
+  - Minimal data collection with clear purpose
+  - Transparent privacy policies in plain language
+  - User control over data sharing
+  - Strong security measures
+- **Impact:** Privacy-conscious apps will build stronger user trust and avoid regulatory issues
+
+## 3. **Seamless Cross-Platform Integration & Ecosystem Thinking**
+- **Why it's essential:** Users interact across multiple devices and platforms daily
+- **Key elements:**
+  - Consistent experience across mobile, web, desktop
+  - Integration with popular platforms and services
+  - Cloud sync capabilities
+  - API-first architecture for future integrations
+- **Impact:** Apps that work well within users' broader digital ecosystem will see higher engagement and stickiness
+
+These three factors address the fundamental shifts in user expectations, regulatory environment, and technological capabilities that will define the mobile app landscape in 2025.",2025-08-16 11:05:14,4103,2037,2066,False,True,False,False
+Constraint-Based,"Explain machine learning in exactly 100 words.
+
+Requirements:
+- Use everyday language (no jargon)
+- Include 2 real-world examples
+- End with a question
+- Confirm it's exactly 100 words","Machine learning is when computers find patterns in data and improve at tasks without being directly told each step. It’s like teaching by showing examples. Your phone’s photo app groups pictures of friends by recognizing faces. Online stores suggest items you might like based on what you and others viewed or bought. Cars use it to help drivers stay in lanes and avoid crashes. Doctors use it to spot signs of disease in scans. It can be helpful, but we must watch for mistakes and bias. This is exactly 100 words. What everyday problem would you want it to solve?","Machine learning is like teaching computers to recognize patterns and make predictions, similar to how humans learn from experience. Instead of programming specific instructions, we show computers lots of examples so they can figure out rules on their own. For instance, by showing a computer thousands of photos labeled ""cat"" or ""dog,"" it learns to identify pets in new pictures. Similarly, streaming services like Netflix analyze your viewing history to recommend movies you might enjoy. The computer gets better at these tasks as it processes more data. What patterns do you think computers could learn from your daily habits?
+
+**Word count: 100 words exactly**",2025-08-16 11:05:51,566,664,-98,True,False,False,False
+Template-Based,"Fill this job posting template:
+
+POSITION: [Job Title]
+COMPANY: [Company Name]
+RESPONSIBILITIES: [3 bullet points]
+REQUIREMENTS: [3 bullet points]
+SALARY: [Range]
+
+Create for: Senior Data Scientist at tech startup","POSITION: Senior Data Scientist
+COMPANY: Stealth-Mode Tech Startup
+RESPONSIBILITIES:
+- Lead end-to-end development of data products: problem framing, data engineering, modeling, deployment, and monitoring to drive key product and growth metrics.
+- Partner with Product and Engineering to design experiments, define success metrics, and translate insights into roadmap decisions; present findings to leadership.
+- Establish best practices and mentor teammates in ML, experimentation, and analytics; evaluate and productionize models using modern MLOps tooling.
+REQUIREMENTS:
+- 5+ years in data science/ML with strong proficiency in Python, SQL, and ML libraries (e.g., pandas, scikit-learn, PyTorch/TF); solid statistics and experimental design.
+- Proven experience owning models in production (feature engineering, CI/CD, monitoring, A/B testing) and working with modern data stacks (e.g., BigQuery/Snowflake, dbt/Airflow, Docker/Kubernetes).
+- Excellent communication and product sense; ability to turn ambiguous problems into measurable solutions; startup experience preferred.
+SALARY: $160,000–$220,000 base + meaningful equity + benefits (DOE/location)","POSITION: Senior Data Scientist
+COMPANY: TechFlow Analytics
+RESPONSIBILITIES: 
+• Lead end-to-end machine learning projects from data collection and preprocessing to model deployment and monitoring in production environments
+• Collaborate with cross-functional teams to identify business opportunities and translate complex data insights into actionable recommendations for product and strategy decisions
+• Mentor junior data scientists and establish best practices for data science workflows, code quality, and experimental design across the organization
+
+REQUIREMENTS:
+• Master's or PhD in Data Science, Statistics, Computer Science, or related quantitative field with 5+ years of industry experience in machine learning and statistical modeling
+• Proficiency in Python/R, SQL, and cloud platforms (AWS/GCP/Azure), with hands-on experience deploying models using Docker, Kubernetes, or similar containerization technologies
+• Strong communication skills with proven ability to present technical findings to non-technical stakeholders and drive data-driven decision making at the executive level
+
+SALARY: $140,000 - $180,000 + equity",2025-08-16 11:06:34,1156,1133,23,False,False,False,False
